@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Together with our families, we joyfully invite you to celebrate the wedding of Allan Joseph Bright & Gladies on Wednesday, 4 November 2026 at CSI LITE Auditorium, Kilpauk, Chennai.",
+          "Join us to celebrate the wedding of Allan Joseph Bright & Gladies on Wednesday, 4 November 2026 at CSI LITE Auditorium, Kilpauk, Chennai.",
       },
       { property: "og:site_name", content: "Allan & Gladies Wedding" },
       { property: "og:type", content: "website" },
@@ -30,11 +30,11 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Together with our families, we joyfully invite you to celebrate the wedding of Allan Joseph Bright & Gladies on Wednesday, 4 November 2026 at CSI LITE Auditorium, Kilpauk, Chennai.",
+          "Join us to celebrate the wedding of Allan Joseph Bright & Gladies on 4 November 2026 at CSI LITE Auditorium, Chennai.",
       },
-      { property: "og:image", content: "https://gladies-weds-allan.invitingyou.top/og-card.jpg" },
-      { property: "og:image:url", content: "https://gladies-weds-allan.invitingyou.top/og-card.jpg" },
-      { property: "og:image:secure_url", content: "https://gladies-weds-allan.invitingyou.top/og-card.jpg" },
+      { property: "og:image", content: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
+      { property: "og:image:url", content: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
+      { property: "og:image:secure_url", content: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
       { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -45,13 +45,13 @@ export const Route = createFileRoute("/")({
       {
         name: "twitter:description",
         content:
-          "Together with our families, we joyfully invite you to celebrate the wedding of Allan Joseph Bright & Gladies on Wednesday, 4 November 2026 at CSI LITE Auditorium, Kilpauk, Chennai.",
+          "Join us to celebrate the wedding of Allan Joseph Bright & Gladies on 4 November 2026 at CSI LITE Auditorium, Chennai.",
       },
-      { name: "twitter:image", content: "https://gladies-weds-allan.invitingyou.top/og-card.jpg" },
+      { name: "twitter:image", content: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://gladies-weds-allan.invitingyou.top/" },
-      { rel: "image_src", href: "https://gladies-weds-allan.invitingyou.top/og-card.jpg" },
+      { rel: "image_src", href: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
     ],
   }),
   component: Invitation,
