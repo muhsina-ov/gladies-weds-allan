@@ -4,6 +4,7 @@ export const couple = {
   tagline: "Two souls, one promise",
   dateLabel: "Wednesday, 4 November 2026",
   weddingISO: "2026-11-04T15:00:00+05:30",
+  productionUrl: "https://gladies-weds-allan.invitingyou.top",
 };
 
 export type WeddingEvent = {
