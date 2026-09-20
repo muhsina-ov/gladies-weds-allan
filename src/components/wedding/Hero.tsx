@@ -50,33 +50,41 @@ export function Hero() {
           alt="Bride and groom walking hand in hand"
           width={1024}
           height={1536}
-          className="pointer-events-none absolute bottom-[28%] left-1/2 w-[64%] max-w-[300px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]"
+          className="pointer-events-none absolute bottom-[35%] left-1/2 w-[62%] max-w-[280px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]"
           style={{ transform: `translate3d(-50%, ${-fg * 0.6}px, 0)` }}
         />
 
         <div
-          className="relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-14 text-center"
+          className="relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-12 text-center"
           style={{ transform: `translate3d(0, ${-fg}px, 0)` }}
         >
+          {/* Subtle paper scrim so text is always crystal clear with no illustration clash */}
+          <div
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-64 -z-10"
+            style={{
+              background: "linear-gradient(to top, var(--paper) 60%, rgba(253, 251, 247, 0.9) 80%, transparent 100%)",
+            }}
+          />
+
           <p className="script text-lg text-primary animate-ink" style={{ animationDelay: "0.4s" }}>
             Together with our families
           </p>
           <h1
-            className="mt-3 font-display text-[3.15rem] leading-[1.02] text-foreground animate-ink"
+            className="mt-2.5 font-display text-[3.25rem] leading-[1.05] text-foreground animate-ink tracking-tight"
             style={{ animationDelay: "0.7s" }}
           >
             {couple.groom}
-            <span className="script mx-2 block text-2xl text-primary">&</span>
+            <span className="script mx-2 block text-2xl text-primary leading-none">&</span>
             {couple.bride}
           </h1>
           <p
-            className="mt-5 text-[0.66rem] uppercase tracking-airy text-muted-foreground animate-ink"
+            className="mt-4 text-[0.66rem] uppercase tracking-airy text-muted-foreground animate-ink"
             style={{ animationDelay: "1s" }}
           >
             {couple.dateLabel}
           </p>
           <p
-            className="mt-2 text-[0.66rem] uppercase tracking-airy text-muted-foreground animate-ink"
+            className="mt-1.5 text-[0.66rem] uppercase tracking-airy text-muted-foreground animate-ink"
             style={{ animationDelay: "1.15s" }}
           >
             CSI LITE Auditorium · Chennai

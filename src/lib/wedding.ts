@@ -1,6 +1,6 @@
 export const couple = {
   bride: "Gladies",
-  groom: "Allan Joseph Bright",
+  groom: "Allan",
   tagline: "Two souls, one promise",
   dateLabel: "Wednesday, 4 November 2026",
   weddingISO: "2026-11-04T15:00:00+05:30",
@@ -30,7 +30,7 @@ export const events: WeddingEvent[] = [
     glyph: "❖",
     date: "4 Nov 2026",
     time: "6:00 PM",
-    venue: "CSI LITE Auditorium",
+    venue: "Family Residence",
     note: "Celebration, dinner & fellowship.",
   },
 ];
