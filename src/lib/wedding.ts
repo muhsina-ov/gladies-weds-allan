@@ -22,7 +22,7 @@ export const events: WeddingEvent[] = [
     glyph: "✝",
     date: "4 Nov 2026",
     time: "3:00 PM",
-    venue: "CSI LITE Auditorium",
+    venue: "Assembly of God Church",
     note: "Solemnisation of Holy Matrimony & blessings.",
   },
   {
@@ -30,10 +30,16 @@ export const events: WeddingEvent[] = [
     glyph: "❖",
     date: "4 Nov 2026",
     time: "6:00 PM",
-    venue: "Family Residence",
+    venue: "CSI LITE Auditorium",
     note: "Celebration, dinner & fellowship.",
   },
 ];
+
+export const weddingCeremonyVenue = {
+  name: "Assembly of God Church",
+  address: "E-17 & 18, 2nd Street, Anna Nagar East, Chennai, Tamil Nadu 600102",
+  mapsUrl: "https://share.google/bVCZLz3v87zLRg3KJ",
+};
 
 export const venue = {
   name: "CSI LITE Auditorium",

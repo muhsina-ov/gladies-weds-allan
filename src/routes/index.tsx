@@ -7,7 +7,7 @@ import { WishLantern } from "@/components/wedding/WishLantern";
 import { WeddingFooter } from "@/components/wedding/WeddingFooter";
 import { InvitationOpener } from "@/components/wedding/InvitationOpener";
 import { MusicPlayer } from "@/components/wedding/MusicPlayer";
-import { couple, events, venue, downloadICS } from "@/lib/wedding";
+import { couple, events, venue, weddingCeremonyVenue, downloadICS } from "@/lib/wedding";
 import { useParallax } from "@/hooks/use-reveal";
 const floral = "https://media.invitestory.in/seashell-vows/src/assets/floral-spray.png";
 import mapImg from "@/assets/venue-map.jpg";
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Join us to celebrate the wedding of Allan & Gladies on Wednesday, 4 November 2026 at CSI LITE Auditorium, Kilpauk, Chennai.",
+          "Join us to celebrate the wedding of Allan & Gladies on Wednesday, 4 November 2026. Ceremony at Assembly of God Church & Reception at CSI LITE Auditorium, Chennai.",
       },
       { property: "og:site_name", content: "Allan & Gladies Wedding" },
       { property: "og:type", content: "website" },
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Join us to celebrate the wedding of Allan & Gladies on 4 November 2026 at CSI LITE Auditorium, Chennai.",
+          "Join us to celebrate the wedding of Allan & Gladies on 4 November 2026. Ceremony at Assembly of God Church & Reception at CSI LITE Auditorium, Chennai.",
       },
       { property: "og:image", content: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
       { property: "og:image:url", content: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/")({
       {
         name: "twitter:description",
         content:
-          "Join us to celebrate the wedding of Allan & Gladies on 4 November 2026 at CSI LITE Auditorium, Chennai.",
+          "Join us to celebrate the wedding of Allan & Gladies on 4 November 2026. Ceremony at Assembly of God Church & Reception at CSI LITE Auditorium, Chennai.",
       },
       { name: "twitter:image", content: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
     ],
@@ -152,10 +152,34 @@ function Invitation() {
         <WishLantern />
       </Reveal>
 
-      {/* Venue */}
-      <section className="px-6 pb-16">
+      {/* Venues */}
+      <section className="space-y-8 px-6 pb-16">
         <Reveal>
-          <SectionTitle overline="Wedding Ceremony Location" title={venue.name} />
+          <SectionTitle overline="Wedding Ceremony Location" title={weddingCeremonyVenue.name} />
+          <div className="card-soft overflow-hidden">
+            <div className="p-5">
+              <span className="inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-[0.62rem] font-medium uppercase tracking-wider text-primary">
+                Wedding Ceremony · 3:00 PM
+              </span>
+              <h3 className="mt-2.5 font-display text-2xl">{weddingCeremonyVenue.name}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{weddingCeremonyVenue.address}</p>
+              <p className="mt-2 text-xs italic text-primary/85">
+                Solemnisation of Holy Matrimony & blessings
+              </p>
+              <a
+                href={weddingCeremonyVenue.mapsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="press mt-5 flex min-h-[48px] items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] uppercase tracking-airy text-primary-foreground"
+              >
+                Open Ceremony in Google Maps
+              </a>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={100}>
+          <SectionTitle overline="Wedding Reception Location" title={venue.name} />
           <div className="card-soft overflow-hidden">
             <img
               src={mapImg}
@@ -166,10 +190,13 @@ function Invitation() {
               className="h-44 w-full object-cover"
             />
             <div className="p-5">
-              <h3 className="font-display text-2xl">{venue.name}</h3>
+              <span className="inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-[0.62rem] font-medium uppercase tracking-wider text-primary">
+                Wedding Reception · 6:00 PM
+              </span>
+              <h3 className="mt-2.5 font-display text-2xl">{venue.name}</h3>
               <p className="mt-1 text-sm text-muted-foreground">{venue.address}</p>
               <p className="mt-2 text-xs italic text-primary/85">
-                Holy Matrimony & solemnisation ceremony at 3:00 PM
+                Celebration, dinner & fellowship
               </p>
               <a
                 href={venue.mapsUrl}
@@ -177,7 +204,7 @@ function Invitation() {
                 rel="noreferrer"
                 className="press mt-5 flex min-h-[48px] items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] uppercase tracking-airy text-primary-foreground"
               >
-                Open in Google Maps
+                Open Reception in Google Maps
               </a>
             </div>
           </div>

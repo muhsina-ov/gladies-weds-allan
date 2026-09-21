@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Join us to celebrate the wedding of Allan & Gladies on Wednesday, 4 November 2026 at CSI LITE Auditorium, Kilpauk, Chennai.",
+          "Join us to celebrate the wedding of Allan & Gladies on Wednesday, 4 November 2026. Ceremony at Assembly of God Church & Reception at CSI LITE Auditorium, Chennai.",
       },
       // Open Graph / WhatsApp / Facebook
       { property: "og:site_name", content: "Allan & Gladies Wedding" },
@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Join us to celebrate the wedding of Allan & Gladies on 4 November 2026 at CSI LITE Auditorium, Chennai.",
+          "Join us to celebrate the wedding of Allan & Gladies on 4 November 2026. Ceremony at Assembly of God Church & Reception at CSI LITE Auditorium, Chennai.",
       },
       { property: "og:image", content: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
       { property: "og:image:url", content: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
@@ -104,7 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "twitter:description",
         content:
-          "Join us to celebrate the wedding of Allan & Gladies on 4 November 2026 at CSI LITE Auditorium, Chennai.",
+          "Join us to celebrate the wedding of Allan & Gladies on 4 November 2026. Ceremony at Assembly of God Church & Reception at CSI LITE Auditorium, Chennai.",
       },
       { name: "twitter:image", content: "https://cdn.jsdelivr.net/gh/muhsina-ov/gladies-weds-allan@main/public/og-card.jpg" },
     ],
